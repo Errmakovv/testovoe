@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #bdbdbd;
+  justify-content: center;
+
+  &-title {
+    margin-right: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #673ab7;
+  }
+
+  &-inp {
+    width: 300px;
+    height: 30px;
+    margin: 5px 20px 0 0;
+    padding-left: 10px;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  &-btn {
+    height: 40px;
+  }
+}
