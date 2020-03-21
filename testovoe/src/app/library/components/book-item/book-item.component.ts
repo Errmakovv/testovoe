@@ -20,4 +20,8 @@ export class BookItemComponent implements OnInit {
     console.log(this.book.id);
     this.bookService.deleteBook(this.book.id);
   }
+
+  public like(): void {
+    this.bookService.likeBook(this.book);
+  }
 }

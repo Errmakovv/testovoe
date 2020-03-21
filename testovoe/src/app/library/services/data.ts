@@ -5,7 +5,8 @@ export default [
     genre: 'wwww',
     image: 'https://hugeorange.com/wp-content/uploads/2018/12/books-521812297.jpg',
     description: 'ssfs',
-    link: 'string'
+    link: 'string',
+    likesCount: 234
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ export default [
     genre: 'nnnn',
     image: 'https://hugeorange.com/wp-content/uploads/2018/12/books-521812297.jpg',
     description: 'ssfs',
-    link: 'string'
+    link: 'string',
+    likesCount: 200
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ export default [
     genre: 'mmmmm',
     image: 'https://hugeorange.com/wp-content/uploads/2018/12/books-521812297.jpg',
     description: 'ssfs',
-    link: 'string'
+    link: 'string',
+    likesCount: 230
   },
   {
     id: 4,
@@ -29,6 +32,7 @@ export default [
     genre: 'pppppp',
     image: 'https://hugeorange.com/wp-content/uploads/2018/12/books-521812297.jpg',
     description: 'ssfs',
-    link: 'string'
+    link: 'string',
+    likesCount: 238
   }
 ];

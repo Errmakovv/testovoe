@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Book } from '../../models/book.model';
-import { BookService } from '../../services/book.service';
-import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-book-list',
@@ -10,12 +8,11 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class BookListComponent implements OnInit {
 
-  public books: BehaviorSubject<Book[]>;
+  @Input() public books: Book[];
 
-  constructor(private bookService: BookService) { }
+  constructor() { }
 
   public ngOnInit(): void {
-    this.books = this.bookService.books$;
   }
 
 }

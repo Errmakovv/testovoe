@@ -9,21 +9,32 @@ import { BehaviorSubject } from 'rxjs';
 export class BookService {
 
   private books: Book[] = data;
+  public myBooks: Book[] = [];
   public books$: BehaviorSubject<Book[]> = new BehaviorSubject<Book[]>(data);
 
   constructor() { }
 
-  public getBooks(): BehaviorSubject<Book[]> {
-    return this.books$;
+  public addBook(book: Book): void {
+    this.books.push({
+      id: this.books[this.books.length - 1].id + 1,
+      likesCount: 0,
+      ...book
+    });
   }
 
-  public addBook(book: Book): void {
-    this.books.push({id: this.books[this.books.length - 1].id + 1, ...book});
-    this.books$.next(this.books);
+  public likeBook(bookLike: Book): void {
+    if (this.myBooks.includes(bookLike)) {
+      this.myBooks = this.myBooks.filter((book: Book) => book !== bookLike);
+      bookLike.likesCount--;
+    } else {
+      this.myBooks.push(bookLike);
+      bookLike.likesCount++;
+    }
   }
 
   public deleteBook(id: number): void {
     this.books = this.books.filter((book: Book) => book.id !== id);
+    this.myBooks = this.myBooks.filter((book: Book) => book.id !== id);
     this.books$.next(this.books);
   }
 

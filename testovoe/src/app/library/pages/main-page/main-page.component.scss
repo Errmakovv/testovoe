@@ -1,9 +1,15 @@
-.main {
+.container {
   padding-top: 30px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 230px;
+  margin: 0 auto 30px;
 }
 
 .btn {
   display: block;
   width: 100px;
-  margin: 0 auto 30px;
 }

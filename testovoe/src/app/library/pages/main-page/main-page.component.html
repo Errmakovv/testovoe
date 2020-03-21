@@ -1,6 +1,9 @@
-<div class="main">
-  <button *ngIf="!adding" (click)="adding=true" class="btn" mat-raised-button color="primary">Add</button>
-  <button *ngIf="adding" (click)="adding=false" class="btn" mat-raised-button color="warn">Close</button>
+<div class="container">
+  <div class="btn-container">
+    <button [routerLink]="['/main/mybooks']" class="btn" mat-raised-button color="primary">My books</button>
+    <button *ngIf="!adding" (click)="adding=true" class="btn" mat-raised-button color="primary">Add</button>
+    <button *ngIf="adding" (click)="adding=false" class="btn" mat-raised-button color="warn">Close</button>
+  </div>
   <app-add-book *ngIf="adding"></app-add-book>
-  <app-book-list></app-book-list>
+  <app-book-list [books]="books | async"></app-book-list>
 </div>

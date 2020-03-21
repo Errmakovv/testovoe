@@ -22,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: 'mybooks',
-    component: MainPageComponent,
+    component: MyBooksPageComponent,
   }
 ];
 

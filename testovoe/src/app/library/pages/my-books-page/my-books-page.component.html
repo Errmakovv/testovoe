@@ -1,1 +1,4 @@
-<p>my-books-page works!</p>
+<div class="container">
+  <button [routerLink]="['/main/']" class="btn" mat-raised-button color="primary">Back</button>
+  <app-book-list [books]="myBooks"></app-book-list>
+</div>

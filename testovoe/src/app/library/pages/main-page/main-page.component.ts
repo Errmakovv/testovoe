@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from '../../services/book.service';
+import { BehaviorSubject } from 'rxjs';
+import { Book } from '../../models/book.model';
 
 @Component({
   selector: 'app-main-page',
@@ -8,10 +11,12 @@ import { Component, OnInit } from '@angular/core';
 export class MainPageComponent implements OnInit {
 
   public adding: boolean = false;
+  public books: BehaviorSubject<Book[]>;
 
-  constructor() { }
+  constructor(private bookService: BookService) { }
 
   public ngOnInit(): void {
+    this.books = this.bookService.books$;
   }
 
 }

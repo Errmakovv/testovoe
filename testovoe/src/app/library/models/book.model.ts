@@ -5,4 +5,5 @@ export interface Book {
   image: string;
   description: string;
   link: string;
+  likesCount: number;
 }

@@ -20,7 +20,7 @@
     </mat-expansion-panel>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary">Like</button>
+    <button (click)="like()" mat-raised-button color="primary">Like {{book.likesCount}}</button>
     <button (click)="delete()" mat-raised-button color="warn">Delete</button>
   </mat-card-actions>
 </mat-card>
