@@ -9,6 +9,9 @@
       <input name="password" ngModel matInput [type]="hide ? 'password' : 'text'" required>
       <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </mat-form-field>
+    <div *ngIf="isInvalid" class="error">
+      <p class="error-text">Invalid email or password</p>
+    </div>
     <button [disabled]="signInForm.invalid" class="btn" mat-raised-button color="primary">Sign in</button>
   </form>
 </div>

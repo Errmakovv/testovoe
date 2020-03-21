@@ -1,6 +1,6 @@
 <mat-card class="add-card">
   <mat-card-content>
-    <form #addForm="ngForm" (ngSubmit)="onAdd(addForm)" *ngIf="true" novalidate>
+    <form #addForm="ngForm" (ngSubmit)="onAdd(addForm)" novalidate>
       <mat-form-field  class="add-form" appearance="fill">
         <mat-label>Title</mat-label>
         <input ngModel name="name" class="input" matInput required>

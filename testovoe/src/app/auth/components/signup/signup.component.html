@@ -11,9 +11,15 @@
     </mat-form-field>
     <mat-form-field class="form" appearance="fill">
       <mat-label>Confirm your password</mat-label>
-      <input ngModel name="password" matInput [type]="hide ? 'password' : 'text'" required>
+      <input ngModel name="confirmPassword" matInput [type]="hide ? 'password' : 'text'" required>
       <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </mat-form-field>
+    <div *ngIf="!isPassConfirm" class="error">
+      <p class="error-text">Passwords do not match</p>
+    </div>
+    <div *ngIf="isUserExist" class="error">
+      <p class="error-text">This email is already exist</p>
+    </div>
     <button [disabled]="signUpForm.invalid" class="btn" mat-raised-button color="primary">Sign up</button>
   </form>
 </div>

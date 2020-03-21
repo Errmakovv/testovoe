@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-signin',
@@ -8,15 +9,15 @@ import { NgForm } from '@angular/forms';
 })
 export class SigninComponent implements OnInit {
 
+  public isInvalid: boolean = false;
   public hide: boolean = true;
 
-  constructor() { }
+  constructor(private loginService: LoginService) { }
 
   public ngOnInit(): void {
   }
 
   public signIn(form: NgForm): void {
-    console.log(form.value);
+    this.isInvalid = this.loginService.SignInUser(form.value.email, form.value.password);
   }
-
 }

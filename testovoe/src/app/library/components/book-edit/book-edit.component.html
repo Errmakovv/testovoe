@@ -1,0 +1,29 @@
+<div class="container">
+  <mat-card class="add-card">
+    <mat-card-content>
+      <form #addForm="ngForm" (ngSubmit)="edit()" novalidate>
+        <mat-form-field  class="add-form" appearance="fill">
+          <mat-label>Title</mat-label>
+          <input [(ngModel)]="book.name" name="name" class="input" matInput required>
+        </mat-form-field>
+        <mat-form-field  class="add-form" appearance="fill">
+          <mat-label>Genre</mat-label>
+          <input [(ngModel)]="book.genre" name="genre" class="input" matInput required>
+        </mat-form-field>
+        <mat-form-field  class="add-form" appearance="fill">
+          <mat-label>Image</mat-label>
+          <input [(ngModel)]="book.image" name="image" class="input" matInput required>
+        </mat-form-field>
+        <mat-form-field  class="add-form" appearance="fill">
+          <mat-label>Link</mat-label>
+          <input [(ngModel)]="book.link" name="link" class="input" matInput required>
+        </mat-form-field>
+        <mat-form-field  class="add-form" appearance="fill">
+          <mat-label>Textarea</mat-label>
+          <textarea [(ngModel)]="book.description" name="description" matInput required></textarea>
+        </mat-form-field>
+        <button [disabled]="addForm.invalid" class="add-btn" mat-raised-button color="primary">Edit</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

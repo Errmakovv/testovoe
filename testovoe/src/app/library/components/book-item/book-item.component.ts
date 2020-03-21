@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Book } from '../../models/book.model';
 import { BookService } from '../../services/book.service';
+import { LoginService } from 'src/app/auth/services/login.service';
 
 @Component({
   selector: 'app-book-item',
@@ -10,10 +11,16 @@ import { BookService } from '../../services/book.service';
 export class BookItemComponent implements OnInit {
 
   @Input() public book: Book;
+  public isEdit: boolean = false;
+  public isAdmin: boolean;
 
-  constructor(private bookService: BookService) { }
+  constructor(
+    private bookService: BookService,
+    private loginService: LoginService
+  ) { }
 
   public ngOnInit(): void {
+    this.isAdmin = this.loginService.isAdmin();
   }
 
   public delete(): void {

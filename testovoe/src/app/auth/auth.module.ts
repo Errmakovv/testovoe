@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthPageComponent } from './pages/auth-page/auth-page.component';
 import { Routes, RouterModule } from '@angular/router';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -11,16 +10,27 @@ import { FormsModule } from '@angular/forms';
 
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
+import { SignInPageComponent } from './pages/sign-in-page/sign-in-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: AuthPageComponent,
+    component: SignInPageComponent,
+  },
+  {
+    path: 'signup',
+    component: SignUpPageComponent,
   }
 ];
 
 @NgModule({
-  declarations: [AuthPageComponent, SigninComponent, SignupComponent],
+  declarations: [
+    SigninComponent,
+    SignupComponent,
+    SignUpPageComponent,
+    SignInPageComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

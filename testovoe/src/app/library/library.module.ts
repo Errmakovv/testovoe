@@ -14,6 +14,7 @@ import { BookListComponent } from './components/book-list/book-list.component';
 import { MyBooksPageComponent } from './pages/my-books-page/my-books-page.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { FormsModule } from '@angular/forms';
+import { BookEditComponent } from './components/book-edit/book-edit.component';
 
 const routes: Routes = [
   {
@@ -32,7 +33,8 @@ const routes: Routes = [
     BookItemComponent,
     BookListComponent,
     MyBooksPageComponent,
-    AddBookComponent
+    AddBookComponent,
+    BookEditComponent
   ],
   imports: [
     CommonModule,

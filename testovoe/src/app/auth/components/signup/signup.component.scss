@@ -10,3 +10,16 @@
 .form {
   width: 100%;
 }
+
+.error {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 15px;
+  padding: 15px 0 8px 10px;
+  background-color: rgb(255, 96, 96);
+
+  &-text {
+    color: white;
+    margin: 0;
+  }
+}

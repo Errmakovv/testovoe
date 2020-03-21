@@ -1,6 +1,0 @@
-<div class="auth-container">
-  <button *ngIf="!signIn" (click)="signIn=true" class="auth-btn" mat-raised-button color="primary">Sign in</button>
-  <button *ngIf="signIn" (click)="signIn=false" class="auth-btn" mat-raised-button color="primary">Sign up</button>
-  <app-signin *ngIf="signIn"></app-signin>
-  <app-signup *ngIf="!signIn"></app-signup>
-</div>
