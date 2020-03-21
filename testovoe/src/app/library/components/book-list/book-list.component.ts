@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../../models/book.model';
+import { BookService } from '../../services/book.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-book-list',
@@ -8,40 +10,12 @@ import { Book } from '../../models/book.model';
 })
 export class BookListComponent implements OnInit {
 
-  public books: Book[] = [
-    {
-      name: 'fkgbk',
-      genre: 'rd',
-      image: 'https://hugeorange.com/wp-content/uploads/2018/12/books-521812297.jpg',
-      description: 'ssfs',
-      link: 'string'
-    },
-    {
-      name: 'fkgbk',
-      genre: 'rd',
-      image: 'https://hugeorange.com/wp-content/uploads/2018/12/books-521812297.jpg',
-      description: 'ssfs',
-      link: 'string'
-    },
-    {
-      name: 'fkgbk',
-      genre: 'rd',
-      image: 'https://hugeorange.com/wp-content/uploads/2018/12/books-521812297.jpg',
-      description: 'ssfs',
-      link: 'string'
-    },
-    {
-      name: 'fkgbk',
-      genre: 'rd',
-      image: 'https://hugeorange.com/wp-content/uploads/2018/12/books-521812297.jpg',
-      description: 'ssfs',
-      link: 'string'
-    }
-  ];
+  public books: BehaviorSubject<Book[]>;
 
-  constructor() { }
+  constructor(private bookService: BookService) { }
 
   public ngOnInit(): void {
+    this.books = this.bookService.books$;
   }
 
 }

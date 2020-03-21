@@ -8,8 +8,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+
 import { BookListComponent } from './components/book-list/book-list.component';
 import { MyBooksPageComponent } from './pages/my-books-page/my-books-page.component';
+import { AddBookComponent } from './components/add-book/add-book.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -23,14 +27,22 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [MainPageComponent, BookItemComponent, BookListComponent, MyBooksPageComponent],
+  declarations: [
+    MainPageComponent,
+    BookItemComponent,
+    BookListComponent,
+    MyBooksPageComponent,
+    AddBookComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     MatCardModule,
     MatFormFieldModule,
     MatExpansionModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    FormsModule
   ]
 })
 export class LibraryModule { }

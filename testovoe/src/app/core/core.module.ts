@@ -4,13 +4,15 @@ import { HeaderComponent } from './components/header/header.component';
 
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [HeaderComponent],
   imports: [
     CommonModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent

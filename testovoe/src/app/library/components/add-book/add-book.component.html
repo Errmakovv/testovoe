@@ -1,0 +1,28 @@
+<mat-card class="add-card">
+  <mat-card-content>
+    <form #addForm="ngForm" (ngSubmit)="onAdd(addForm)" *ngIf="true" novalidate>
+      <mat-form-field  class="add-form" appearance="fill">
+        <mat-label>Title</mat-label>
+        <input ngModel name="name" class="input" matInput required>
+      </mat-form-field>
+      <mat-form-field  class="add-form" appearance="fill">
+        <mat-label>Genre</mat-label>
+        <input ngModel name="genre" class="input" matInput required>
+      </mat-form-field>
+      <mat-form-field  class="add-form" appearance="fill">
+        <mat-label>Image</mat-label>
+        <input ngModel name="image" class="input" matInput required>
+      </mat-form-field>
+      <mat-form-field  class="add-form" appearance="fill">
+        <mat-label>Link</mat-label>
+        <input ngModel name="link" class="input" matInput required>
+      </mat-form-field>
+      <mat-form-field  class="add-form" appearance="fill">
+        <mat-label>Textarea</mat-label>
+        <textarea ngModel name="description" matInput required></textarea>
+      </mat-form-field>
+      <button [disabled]="addForm.invalid" class="add-btn" mat-raised-button color="primary">Add</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+

@@ -1,3 +1,6 @@
 <div class="main">
+  <button *ngIf="!adding" (click)="adding=true" class="btn" mat-raised-button color="primary">Add</button>
+  <button *ngIf="adding" (click)="adding=false" class="btn" mat-raised-button color="warn">Close</button>
+  <app-add-book *ngIf="adding"></app-add-book>
   <app-book-list></app-book-list>
 </div>
