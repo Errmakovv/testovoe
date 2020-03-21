@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     MatInputModule,
     MatButtonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { BookService } from 'src/app/library/services/book.service';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +10,18 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public searchValue: Subject<string> = new Subject<string>();
+
+  constructor(private bookService: BookService) { }
 
   public ngOnInit(): void {
+    this.searchValue.pipe(
+      debounceTime(600),
+      distinctUntilChanged()
+    )
+    .subscribe(value => {
+      this.bookService.searchBooks(value);
+    });
   }
 
 }

@@ -26,4 +26,11 @@ export class BookService {
     this.books = this.books.filter((book: Book) => book.id !== id);
     this.books$.next(this.books);
   }
+
+  public searchBooks(value: string): void {
+    value = value.toLowerCase().trim();
+    this.books$.next(this.books.filter((book: Book) => {
+      return book.name.toLowerCase().includes(value) || book.genre.toLowerCase().includes(value);
+    }));
+  }
 }

@@ -1,5 +1,5 @@
 <header class="header">
   <a [routerLink]="['/main']"><h1 class="header-title">Library</h1></a>
-  <input class="header-inp" type="text" placeholder="search">
+  <input ngModel (ngModelChange)="searchValue.next($event)" class="header-inp" type="text" placeholder="search">
   <button [routerLink]="['/login']" class="header-btn" mat-raised-button color="primary">Log in</button>
 </header>
