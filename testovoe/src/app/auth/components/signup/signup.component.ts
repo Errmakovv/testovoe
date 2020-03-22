@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormControl, Validators } from '@angular/forms';
 import { LoginService } from '../../services/login.service';
 
 @Component({
@@ -12,6 +12,9 @@ export class SignupComponent implements OnInit {
   public isPassConfirm: boolean = true;
   public isUserExist: boolean = false;
   public hide: boolean = true;
+  public emailFormControl: FormControl = new FormControl('', [
+    Validators.email
+  ]);
 
   constructor(private loginService: LoginService) { }
 

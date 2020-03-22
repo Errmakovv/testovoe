@@ -20,15 +20,28 @@ export class BookItemComponent implements OnInit {
   ) { }
 
   public ngOnInit(): void {
-    this.isAdmin = this.loginService.isAdmin();
+    this.isAdmin = this.loginService.currentUser.isAdmin;
+  }
+
+  public edit(): void {
+    this.isEdit = false;
+    this.bookService.saveBooks();
   }
 
   public delete(): void {
-    console.log(this.book.id);
+    this.loginService.deleteUsersBook(this.book.id);
     this.bookService.deleteBook(this.book.id);
   }
 
   public like(): void {
-    this.bookService.likeBook(this.book);
+    let bookIds: number[] = this.loginService.currentUser.bookIds;
+    if (bookIds.includes(this.book.id)) {
+      this.loginService.currentUser.bookIds = bookIds.filter((id: number) => id !== this.book.id);
+      this.bookService.unLikeBook(this.book);
+    } else {
+      bookIds.push(this.book.id);
+      this.bookService.likeBook(this.book);
+    }
+    this.loginService.saveUsers();
   }
 }

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Big Billion Startup - The Untold Flipkart Story",
+    "genre": "Biography",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41i-v-a1KVL._SX322_BO1,204,203,200_.jpg",
+    "description": "IIT graduates Sachin Bansal and Binny Bansal founded out of a Bangalore apartment what would become India’s biggest e-commerce startup. Established in October 2007, Flipkart began as an online bookstore and soon came to be known for its ‘customer obsession’. As the startup’s reputation grew, so did its value, with venture capitalists in India and abroad lining up to invest heavily in the company that stood for bold ambition, unabashed consumerism and the virtues of technology.",
+    "link": "https://www.amazon.in/dp/9389109140/ref=sspa_dk_detail_2?psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExSVBFVUk2Tk45WFA4JmVuY3J5cHRlZElkPUEwNDYxMDEzTlRWNlFSNldRUjBJJmVuY3J5cHRlZEFkSWQ9QTA2Mzg0NjAyQjM5WEJHOEZJTFZNJndpZGdldE5hbWU9c3BfZGV0YWlsJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==",
+    "likesCount": 0
+  },
+  {
+    "id": 2,
+    "name": "Doctor Sleep",
+    "genre": "Horror",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41%2BSusntjEL._SX320_BO1,204,203,200_.jpg",
+    "description": "Years ago, the haunting of the Overlook Hotel nearly broke young Dan Torrance’s sanity, as his paranormal gift known as “the shining” opened a door straight into hell. And even though Dan is all grown up, the ghosts of the Overlook—and his father’s legacy of alcoholism and violence—kept him drifting aimlessly for most of his life. ",
+    "link": "https://www.amazon.com/dp/1982131802/ref=s9_acsd_simh_bw_c2_x_2_i?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-5&pf_rd_r=13Q4V24GF7XSYW7M3KQR&pf_rd_t=101&pf_rd_p=889f20ae-7a86-4a16-ac38-93a1a337bd26&pf_rd_i=283155",
+    "likesCount": 0
+  },
+  {
+    "id": 3,
+    "name": "It: A Novel",
+    "genre": "Horror",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41nngxCNKxL._SX326_BO1,204,203,200_.jpg",
+    "description": "Welcome to Derry, Maine. It’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real.",
+    "link": "https://www.amazon.com/dp/1982127791/ref=s9_acsd_simh_bw_c2_x_4_i?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-5&pf_rd_r=13Q4V24GF7XSYW7M3KQR&pf_rd_t=101&pf_rd_p=889f20ae-7a86-4a16-ac38-93a1a337bd26&pf_rd_i=283155",
+    "likesCount": 0
+  }
+]

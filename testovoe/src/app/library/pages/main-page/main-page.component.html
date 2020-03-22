@@ -1,7 +1,7 @@
 <div class="container">
   <div class="btn-container">
     <button [routerLink]="['/main/mybooks']" class="btn" mat-raised-button color="primary">My books</button>
-    <button *ngIf="!adding" (click)="adding=true" class="btn" mat-raised-button color="primary">Add</button>
+    <button *ngIf="!adding && isAdmin" (click)="adding=true" class="btn" mat-raised-button color="primary">Add</button>
     <button *ngIf="adding" (click)="adding=false" class="btn" mat-raised-button color="warn">Close</button>
   </div>
   <app-add-book *ngIf="adding"></app-add-book>

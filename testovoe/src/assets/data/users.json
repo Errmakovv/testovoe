@@ -1,0 +1,14 @@
+[
+  {
+    "email": "admin@admin.com",
+    "password": "1234",
+    "isAdmin": true,
+    "bookIds": []
+  },
+  {
+    "email": "tim@tim.com",
+    "password": "1234",
+    "isAdmin": false,
+    "bookIds": []
+  }
+]

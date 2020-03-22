@@ -1,5 +1,5 @@
 <header class="header">
   <h1 class="header-title">Library</h1>
-  <input ngModel (ngModelChange)="searchValue.next($event)" class="header-inp" type="text" placeholder="search">
-  <button [routerLink]="['/login']" class="header-btn" mat-raised-button color="primary">Log in</button>
+  <input ngModel (ngModelChange)="searchValue.next($event)" [disabled]="!isMain" class="header-inp" type="text" placeholder="search">
+  <button [disabled]="!loginService.isSignIn" (click)="logOut()" class="header-btn" mat-raised-button color="primary">Log out</button>
 </header>

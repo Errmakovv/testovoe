@@ -2,7 +2,10 @@
   <form #signInForm="ngForm" (ngSubmit)="signIn(signInForm)" novalidate>
     <mat-form-field class="form" appearance="fill">
       <mat-label>Email</mat-label>
-      <input name="email" type="email" ngModel class="input" matInput required>
+      <input ngModel email placeholder="Ex. pat@example.com" name="email" class="input" matInput required>
+      <mat-error *ngIf="emailFormControl.hasError('email')">
+        Please enter a valid email address
+      </mat-error>
     </mat-form-field>
     <mat-form-field class="form" appearance="fill">
       <mat-label>Enter your password</mat-label>

@@ -1,5 +1,5 @@
 <mat-card class="card">
-  <app-book-edit (onEdit)="isEdit=false" [book]="book" *ngIf="isEdit"></app-book-edit>
+  <app-book-edit (onEdit)="edit()" [book]="book" *ngIf="isEdit"></app-book-edit>
   <mat-card-header>
     <mat-card-title>{{book.name}}</mat-card-title>
     <mat-card-subtitle>{{book.genre}}</mat-card-subtitle>

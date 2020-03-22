@@ -15,6 +15,7 @@ import { MyBooksPageComponent } from './pages/my-books-page/my-books-page.compon
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { FormsModule } from '@angular/forms';
 import { BookEditComponent } from './components/book-edit/book-edit.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
