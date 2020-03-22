@@ -28,8 +28,15 @@ export class BookService {
   }
 
   public addBook(book: Book): void {
+    let id: number;
+    if (this.books.length) {
+      console.log('yu')
+      id = this.books[this.books.length - 1].id + 1;
+    } else {
+      id = 1;
+    }
     this.books.push({
-      id: this.books[this.books.length - 1].id + 1,
+     id,
       likesCount: 0,
       ...book
     });

@@ -1,20 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
-
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [HeaderComponent],
   imports: [
     CommonModule,
-    MatInputModule,
-    MatButtonModule,
     RouterModule,
-    FormsModule
+    SharedModule
   ],
   exports: [
     HeaderComponent
